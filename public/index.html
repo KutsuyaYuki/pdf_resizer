@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Compressor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Compressor</h1>
+        <form id="pdfForm" action="/compress" method="post" enctype="multipart/form-data">
+            <label for="pdfFile">Upload PDF:</label>
+            <div class="file-drop-area" id="fileDropArea">
+                <input type="file" id="pdfFile" name="pdfFile" accept="application/pdf" required>
+                <span class="fake-btn">Choose file</span>
+                <span class="file-msg">or drag and drop a file here</span>
+            </div>
+            <button type="submit">Compress PDF</button>
+        </form>
+        <div class="result" id="result"></div>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
